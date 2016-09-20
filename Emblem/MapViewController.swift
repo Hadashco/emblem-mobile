@@ -49,7 +49,7 @@ class MapViewController: UIViewController {
                 }
             })
         } else {
-            let alert = UIAlertController(title: "Gee wilikers", message: "GPS is mid-convo with your device, try again shortly", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Gee wilikers", message: "Your location is not yet available, try again shortly", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Got it", style: .Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
