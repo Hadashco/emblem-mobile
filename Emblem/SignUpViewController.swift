@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController {
         } else if (password1 == password2) {
 
             self.performSegueWithIdentifier(MapViewController.getEntrySegueIdentifierFromSignup(), sender: true)
-            let hashedPassword = password2.sha512()
+            let hashedPassword = password2.sha256()
             let url = NSURL(string: Store.serverLocation + "auth/local/register")!
             HTTPRequest.post(["username": email, "password": hashedPassword], dataType: .JSON, url: url, postCompleted: { (succeeded, msg) in
                 if succeeded {

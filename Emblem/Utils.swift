@@ -34,3 +34,13 @@ class Utils {
         return backgroundLoadingView
     }
 }
+
+extension String {
+    func sha256() -> String {
+        let data = self.dataUsingEncoding(NSUTF8StringEncoding)!
+        var digest = [UInt8](count: Int(CC_SHA256_DIGEST_LENGTH), repeatedValue: 0)
+        CC_SHA256(data.bytes, CC_LONG(data.length), &digest)
+        let hexBytes = digest.map {String(format: "%02hhx", $0) }
+        return hexBytes.joinWithSeparator("")
+    }
+}
