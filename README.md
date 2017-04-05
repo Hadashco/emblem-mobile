@@ -44,4 +44,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Acknowledgements
 --------------------------
-* Special thanks to the [Vuforia](https://vuforia.com/) team for the open-source availability of their library
+* Special thanks to the [Vuforia](https://vuforia.com/) team for the open-source availability of their library.
